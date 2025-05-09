@@ -1,0 +1,111 @@
+%%% --- define page size --- %%%
+% standard US letter and margins
+\documentclass[letterpaper,12pt]{article}
+\usepackage[letterpaper, 
+            top=2.5cm, 
+            bottom=2.5cm, 
+            left=3.5cm, 
+            right=2.5cm, 
+            marginparwidth=2cm
+            ]{geometry}
+
+% A4 and margins
+% \documentclass[a4paper,12pt]{article}
+% \usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm, marginparwidth=2cm]{geometry}
+
+
+%%% --- spacing --- %%%
+\usepackage{setspace}
+\onehalfspacing
+% spacing in figure captions
+\usepackage{caption}
+\captionsetup{font=small, labelfont=bf, skip=5pt}
+
+%%% --- Language and font encodings --- %%%
+\usepackage[english]{babel}
+% \usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{tabu}
+
+
+%%% --- font style --- %%%
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+% \usepackage{helvet}
+% \usepackage{tgtermes}
+% \usepackage{mathptmx} % times new roman
+% \usepackage{helvet} % or helvet
+% \renewcommand{\familydefault}{\sfdefault}
+% default font
+\renewcommand{\familydefault}{\rmdefault}
+
+%%% -- Titles --- %%%
+\titleformat{\section}
+  % {\normalfont\sffamily\Large\bfseries\color{blue}}
+  {\normalfont\rmfamily\Large\bfseries\color{black}}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  % {\normalfont\sffamily\large\bfseries\color{cyan}}
+  {\normalfont\rmfamily\large\bfseries\color{black}}
+  {\thesubsection}{1em}{}
+
+%%% --- Text float around figures --- %%%
+%  control how much space appears around floats
+\setlength{\floatsep}{12pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+
+%%% --- Figure numbering --- %%%
+\usepackage{amsmath}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+
+%%% --- Useful packages --- %%%
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{svg}
+\usepackage{indentfirst}
+%\usepackage{apacite}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{multirow}
+\usepackage{enumitem}
+\setlist{  
+  listparindent=\parindent,
+  parsep=0pt,
+}
+
+% Table
+\usepackage{tabularray}
+\renewcommand{\arraystretch}{1.2}  % Adjust the line height in tables
+\setlength{\tabcolsep}{10pt}  % Adjust the column separation in tables
+
+
+% citation format: ACS (American Chemical Society) 
+\usepackage{achemso}
+
+
+%% --- REAL PAGE CONTENT STARTS --- %%
+\title{\bfseries Research Update}
+% \author{Jian Huang \\ Write Your Student ID}
+\author{Jian Huang}
+\date{2024 Sep}
+
+\begin{document}
+\maketitle
+\begin{sloppypar}   % avoid new indentations of new paragraphs & overfull warnings
+% Project 1
+\input{project1}
+
+% Project 2
+\input{project2}
+
+\newpage
+
+% \bibliographystyle{plain}
+\bibliography{refs}
+
+\end{sloppypar}
+\end{document}
