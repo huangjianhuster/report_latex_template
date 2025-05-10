@@ -1,0 +1,84 @@
+%%% --- page size --- %%%
+\usepackage[letterpaper, 
+            top=2.5cm, 
+            bottom=2.5cm, 
+            left=3.5cm, 
+            right=2.5cm, 
+            marginparwidth=2cm
+            ]{geometry}
+% A4 and margins
+% \documentclass[a4paper,12pt]{article}
+% \usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm, marginparwidth=2cm]{geometry}
+
+
+%%% --- spacing --- %%%
+\usepackage{setspace}
+\onehalfspacing
+% spacing in figure captions
+\usepackage{caption}
+\captionsetup{font=small, labelfont=bf, skip=5pt}
+
+
+%%% --- Language and font encodings --- %%%
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\renewcommand{\familydefault}{\rmdefault}
+
+
+%%% -- Titles --- %%%
+\usepackage{titlesec}
+\titleformat{\section}
+  % {\normalfont\sffamily\Large\bfseries\color{blue}}
+  {\normalfont\rmfamily\Large\bfseries\color{black}}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  % {\normalfont\sffamily\large\bfseries\color{cyan}}
+  {\normalfont\rmfamily\large\bfseries\color{black}}
+  {\thesubsection}{1em}{}
+
+\usepackage{booktabs}
+\usepackage{tabu}
+
+
+%%% --- Math and Tables --- %%%
+\usepackage{amsmath}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{tabularray}
+\renewcommand{\arraystretch}{1.2}  % Adjust the line height in tables
+\setlength{\tabcolsep}{10pt}  % Adjust the column separation in tables
+
+
+%%% --- List --- %%%
+\usepackage{enumitem}
+\setlist{  
+  listparindent=\parindent,
+  parsep=0pt,
+}
+
+
+%%% --- Text float around figures --- %%%
+%  control how much space appears around floats
+\setlength{\floatsep}{12pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+
+
+%%% --- Other useful packages --- %%%
+\usepackage{svg}
+\usepackage{indentfirst}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{multirow}
+\usepackage{lipsum}
+\usepackage{datatool}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+
+%%% --- citation format --- %%%
+% ACS (American Chemical Society)
+\usepackage{achemso}

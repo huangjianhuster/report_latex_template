@@ -1,0 +1,39 @@
+\section{\textbf{Project Title 2}}
+
+\subsection{Goal and Motivation}
+\lipsum[21]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=400pt]{assets/figures/YellowstoneSpring.jpg}
+    \caption{A placehold for the figure caption}
+    \label{fig:label2}
+\end{figure}
+
+
+\subsection{An Example of plotting with Tikz}
+\lipsum[28]
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+        xlabel={X-axis},
+        ylabel={Y-axis},
+        title={A Simple Plot}
+    ]
+    \addplot[color=red,mark=*] coordinates {
+        (1,1)
+        (2,4)
+        (3,9)
+        (4,16)
+        (5,25)
+    };
+    \end{axis}
+\end{tikzpicture}
+\caption{A placehold for the figure caption}
+\end{figure}
+
+\lipsum[25]
+
+\newpage
