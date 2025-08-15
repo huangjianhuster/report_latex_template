@@ -1,23 +1,15 @@
 %%% --- page size --- %%%
-\usepackage[letterpaper, 
-            top=2.5cm, 
-            bottom=2.5cm, 
-            left=3.5cm, 
-            right=2.5cm, 
-            marginparwidth=2cm
-            ]{geometry}
 % A4 and margins
 % \documentclass[a4paper,12pt]{article}
 % \usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm, marginparwidth=2cm]{geometry}
-
+\usepackage[letterpaper,margin=1in]{geometry}
 
 %%% --- spacing --- %%%
 \usepackage{setspace}
 \onehalfspacing
 % spacing in figure captions
 \usepackage{caption}
-\captionsetup{font=small, labelfont=bf, skip=5pt}
-
+\captionsetup{font={small}, labelfont=bf}
 
 %%% --- Language and font encodings --- %%%
 \usepackage[T1]{fontenc}
@@ -28,14 +20,10 @@
 
 %%% -- Titles --- %%%
 \usepackage{titlesec}
-\titleformat{\section}
-  % {\normalfont\sffamily\Large\bfseries\color{blue}}
-  {\normalfont\rmfamily\Large\bfseries\color{black}}
-  {\thesection}{1em}{}
-\titleformat{\subsection}
-  % {\normalfont\sffamily\large\bfseries\color{cyan}}
-  {\normalfont\rmfamily\large\bfseries\color{black}}
-  {\thesubsection}{1em}{}
+\titleformat{\section}{\normalfont\fontsize{14}{16}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\fontsize{12}{14}\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\fontsize{10}{12}\bfseries}{\thesubsubsection}{1em}{}
+
 
 \usepackage{booktabs}
 \usepackage{tabu}
