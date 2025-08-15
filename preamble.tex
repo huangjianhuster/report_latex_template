@@ -4,6 +4,41 @@
 % \usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm, marginparwidth=2cm]{geometry}
 \usepackage[letterpaper,margin=1in]{geometry}
 
+% %%% --- Page X of Y footer --- %%% 
+% \usepackage{fancyhdr}
+% \usepackage{lastpage}
+% \pagestyle{fancy}
+% \fancyhf{} % clear default header/footer
+% % Header: section title on left, empty center, empty right
+% \fancyhead[L]{\nouppercase{\leftmark}}
+% % Footer: centered "Page X of Y"
+% \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+% % Optional: remove header line, keep footer line
+% \renewcommand{\headrulewidth}{0.4pt}
+% \renewcommand{\footrulewidth}{0.4pt}
+
+
+%%% --- Headers and Footers --- %%%
+% using fancy package
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyhead[L]{\nouppercase{\leftmark}} % Left header: section title
+\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}} % Center footer: Page X of Y
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Define a custom pagestyle for the first page
+\fancypagestyle{firstpage}{
+  \fancyhf{} % clear all header and footer fields for this style
+  \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}} % add only the footer
+  \renewcommand{\headrulewidth}{0pt} % no header rule
+  \renewcommand{\footrulewidth}{0.4pt} % keep the footer rule
+}
+
+
+
 %%% --- spacing --- %%%
 \usepackage{setspace}
 \onehalfspacing
@@ -15,8 +50,10 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\renewcommand{\familydefault}{\rmdefault}
-
+%\renewcommand{\familydefault}{\rmdefault}
+\renewcommand{\rmdefault}{ptm} % Times
+\renewcommand{\sfdefault}{phv} % Helvetica
+\renewcommand{\ttdefault}{pcr} % Courier
 
 %%% -- Titles --- %%%
 \usepackage{titlesec}
@@ -24,10 +61,8 @@
 \titleformat{\subsection}{\normalfont\fontsize{12}{14}\bfseries}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\normalfont\fontsize{10}{12}\bfseries}{\thesubsubsection}{1em}{}
 
-
 \usepackage{booktabs}
 \usepackage{tabu}
-
 
 %%% --- Math and Tables --- %%%
 \usepackage{amsmath}
