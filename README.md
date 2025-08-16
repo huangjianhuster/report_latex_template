@@ -4,12 +4,18 @@
 @date: May 2025
 
 ## What does this template look like
-Please check the `main.pdf` for a quick overview. Overall, the template uses:
+Please check the `main.pdf` for a quick overview.
+
+![](preview.gif)
+
+Overall, the template uses:
 1. Standard US letter for the page size
 2. Centered figures and tables with a sequential numbering scheme according to the Chapter order.
 3. Examples of lists, figure and tables.
 4. Well-defined margins, reference styles and footnotes.
 5. Organized architecture for further customized modifications to your own design.
+
+
 
 ## Architecture of the template
 The files and directories are handled in the following scheme.
