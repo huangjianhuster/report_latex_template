@@ -16,7 +16,7 @@ The files and directories are handled in the following scheme.
 ```
 document/
 ├── main.tex              % Main document entry point
-├── preamble.tex          % All packages, spacing, fonts, settings
+├── myreport.cls          % Styling file for global layout control
 ├── refs.bib              % Bibliography exported from Zotero
 ├── chapters/             % Your content sections (renamed for clarity)
 │   ├── project1.tex
