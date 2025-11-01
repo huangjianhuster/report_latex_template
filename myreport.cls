@@ -67,3 +67,5 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepackage{achemso}
+\usepackage{amsmath}
+\usepackage{amssymb}
